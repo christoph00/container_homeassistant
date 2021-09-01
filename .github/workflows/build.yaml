@@ -16,7 +16,6 @@ jobs:
       matrix:
         arch: [ amd64, arm64v8 ]
     steps:
-    steps:
       - name: Checkout repository
         uses: actions/checkout@v2
 
