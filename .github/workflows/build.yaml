@@ -14,7 +14,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        arch: [ amd64, arm64v8 ]
+        arch: [ amd64, arm64 ]
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
@@ -29,7 +29,7 @@ jobs:
         uses: redhat-actions/buildah-build@v2
         with:
           image: container_homeassistant
-          tags: latest
+          tags: ${{ matrix.arch }}
           arch: ${{ matrix.arch }}
           oci: true
           dockerfiles: ./Containerfile
