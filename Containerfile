@@ -1,6 +1,6 @@
 FROM docker.io/homeassistant/home-assistant
 
-RUN pip install queueman && pip install aiogithubapi
+RUN pip install queueman && pip install aiogithubapi && pip install psycopg2
 
 RUN apk update && apk add libcap bluez-btmon
 #RUN setcap 'cap_net_raw,cap_net_admin+eip' /usr/local/bin/python3.9
