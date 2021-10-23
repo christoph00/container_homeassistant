@@ -32,7 +32,7 @@ jobs:
         id: build-image
         uses: redhat-actions/buildah-build@v2
         with:
-          image: container_homeassistant
+          image: christoph00/container_homeassistant
           tags: ${{ matrix.arch }}
           arch: ${{ matrix.arch }}
           oci: true
