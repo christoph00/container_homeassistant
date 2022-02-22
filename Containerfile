@@ -1,4 +1,4 @@
-FROM docker.io/homeassistant/home-assistant:2021.10
+FROM docker.io/homeassistant/home-assistant:2022.2
 
 RUN pip install queueman aiogithubapi psycopg2 xmltodict
 
